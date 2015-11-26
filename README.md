@@ -1,5 +1,7 @@
 # Google Geocoding API for Laravel 4
 
+## Fork which requires new version guzzle
+
 [![Latest Stable Version](https://poser.pugx.org/jcf/geocode/v/stable.svg)](https://packagist.org/packages/jcf/geocode) [![Total Downloads](https://poser.pugx.org/jcf/geocode/downloads.svg)](https://packagist.org/packages/jcf/geocode) [![License](https://poser.pugx.org/jcf/geocode/license.svg)](https://packagist.org/packages/jcf/geocode)
 
 A simple [Laravel 4](http://four.laravel.com/) service provider for Google Geocoding API.
@@ -12,7 +14,7 @@ This package can be installed via [Composer](http://getcomposer.org) by requirin
 ```json
 {
     "require": {
-        "jcf/geocode": "1.0.*"
+        "dmitrymomot/geocode": "1.0.*"
     }
 }
 ```
@@ -39,10 +41,10 @@ You can find data from addresses:
 $response = Geocode::make()->address('1 Infinite Loop');
 
 if ($response) {
-	echo $response->latitude();
-	echo $response->longitude();
-	echo $response->formattedAddress();
-	echo $response->locationType();
+    echo $response->latitude();
+    echo $response->longitude();
+    echo $response->formattedAddress();
+    echo $response->locationType();
 }
 
 // Output
@@ -57,10 +59,10 @@ Or from latitude/longitude:
 ```php
 $response = Geocode::make()->latLng(40.7637931,-73.9722014);
 if ($response) {
-	echo $response->latitude();
-	echo $response->longitude();
-	echo $response->formattedAddress();
-	echo $response->locationType();
+    echo $response->latitude();
+    echo $response->longitude();
+    echo $response->formattedAddress();
+    echo $response->locationType();
 }
 
 // Output
@@ -75,8 +77,8 @@ If you need other data rather than formatted address, latitude, longitude or loc
 ```php
 $response = Geocode::make()->latLng(40.7637931,-73.9722014);
 if ($response) {
-	echo $response->raw()->address_components[8]['types'][0];
-	echo $response->raw()->address_components[8]['long_name'];
+    echo $response->raw()->address_components[8]['types'][0];
+    echo $response->raw()->address_components[8]['long_name'];
 }
 
 // Output
