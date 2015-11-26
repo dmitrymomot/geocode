@@ -1,6 +1,6 @@
 {
-    "name": "jcf/geocode",
-    "description": "Google Geocoding API for Laravel 4",
+    "name": "dmitrymomot/geocode",
+    "description": "Google Geocoding API for Laravel 4 (fork jcf/geocode with updated guzzle)",
     "keywords": ["laravel", "google", "geocode", "geocoding", "address", "latitude", "longitude", "api"],
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "guzzlehttp/guzzle": "4.0.2"
+        "guzzlehttp/guzzle": "~5"
     },
     "autoload": {
         "psr-0": {
